@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1E201F;
+}
+#acceuil {
+    background-image: url(../public/img/fond_montagne.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-bottom: 1000px;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bandeau{
+    padding: 50px;
+    width: 100%;
+    background-color: rgba(140,151,155,0.1);
+}
+
+#contenuBandeau {
+    text-align: center;
+}
