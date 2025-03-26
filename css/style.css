@@ -2,13 +2,99 @@
     margin: 0;
     padding: 0;
 }
+
 @font-face {
     font-family: 'ohmycode';
     src: url('./../public/font/Luna.ttf.ttf');
 }
+
 body {
     background-color: #1E201F;
 }
+
+* p {
+    font-size: large;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo a img {
+    width: 10%;
+}
+header #logo a:hover img {
+    transform: scale(2);
+    transition-duration: 1s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header #lien a {
+    color: #E4ECEF;
+    text-decoration: none;
+    padding: 20px;
+    margin: 20px;
+}
+
+header #lien,
+header #logo {
+    margin: 20px;
+}
+
+.btn {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #ffedd3;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+  
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #ffc506;
+    transition: 0.5s ease;
+}
+  
+.btn:hover {
+    color: #1e1e2b;
+    transition-delay: 0.5s;
+}
+  
+.btn:hover::before {
+    width: 100%;
+}
+  
+.btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #ffc506;
+    transition: 0.4s ease;
+    z-index: -1;
+}
+  
+.btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+}
+
 #acceuil {
     background-image: url(../public/img/fond_montagne.jpg);
     background-size: 100% auto;
@@ -35,4 +121,11 @@ body {
 #contenuBandeau h1 {
     font-family: 'ohmycode';
     font-size: large;
+    animation: zoomIn;
+    animation-duration: 1.5s;
+}
+
+#contenuBandeau p {
+    animation: zoomIn;
+    animation-duration: 1.5s;
 }
