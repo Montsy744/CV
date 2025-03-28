@@ -21,6 +21,8 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    animation: fadeInLeft;
+    animation-duration: 1.5s;
 }
 
 header #logo a img {
@@ -31,13 +33,7 @@ header #logo a:hover img {
     transition-duration: 1s;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-header #lien a {
-    color: #E4ECEF;
-    text-decoration: none;
-    padding: 20px;
-    margin: 20px;
+    margin-left: 20px;
 }
 
 header #lien,
@@ -50,11 +46,13 @@ header #logo {
     background: transparent;
     border: none;
     padding: 1em 1.5em;
-    color: #ffedd3;
+    color: #E4ECEF;
     text-transform: uppercase;
     position: relative;
     transition: 0.5s ease;
     cursor: pointer;
+    padding: 20px;
+    margin: 20px;
 }
   
 .btn::before {
@@ -72,7 +70,7 @@ header #logo {
     color: #1e1e2b;
     transition-delay: 0.5s;
 }
-  
+
 .btn:hover::before {
     width: 100%;
 }
@@ -100,7 +98,6 @@ header #logo {
     background-size: 100% auto;
     background-repeat: no-repeat;
     height: 100vh;
-    margin-bottom: 1000px;
 }
 .flex {
     display: flex;
@@ -129,3 +126,93 @@ header #logo {
     animation: zoomIn;
     animation-duration: 1.5s;
 }
+
+#contenuBandeau .containerDownload {
+    margin: 50px;
+}
+
+#contenuBandeau .containerDownload .download-btn {
+    text-decoration: none;
+    color: #1e1e2b;
+    border-radius: 50px;
+    padding: 20px;
+    box-shadow: 0 0 10px #1e1e2b;
+}
+#contenuBandeau .containerDownload .download-btn:hover i {
+    transform: scale(1.5);
+    padding: 5px;
+    border-radius: 100%;
+    transition-duration: 0.5s;
+}
+
+#contenuBandeau .containerDownload .download-btn:hover {
+    background-color: #ffc506;
+    transition-duration: 0.5s;
+}
+
+#presentation {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 100vh;
+
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 5%;
+    margin: 10px;
+}
+
+#presentationText {
+    grid-column: 1;
+    padding: 10%;
+    
+}
+
+#presentationText p {
+    text-align: justify;
+    color: #E4ECEF;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+#presentationImg {
+    grid-column: 2;
+    padding: 10%;
+}
+
+#presentationImg img {
+    border-radius: 100px;
+}
+
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+    transition-delay: var(
+      --delay,
+      0s
+    ); /* Utilisation de la variable CSS pour le délai d'apparition */
+  }
+  
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .reveal.disappear-up {
+    opacity: 0;
+    transform: translateY(-50px); /* Déplace l'élément vers le haut */
+    transition: opacity 1s ease, transform 1s ease; /* Durée de transition sans délai */
+  }
+  
+  .reveal.disappear-down {
+    opacity: 0;
+    transform: translateY(50px); /* Déplace l'élément vers le bas */
+    transition: opacity 1s ease, transform 1s ease; /* Durée de transition sans délai */
+  }
+  
